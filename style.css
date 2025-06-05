@@ -1,6 +1,6 @@
 body {
-    background: rgb(239, 238, 216);
-    color: rgb(65, 65, 65);
+    background: #ffb1d3;
+    background: radial-gradient(circle, rgb(255, 174, 209) 0%, rgb(255, 226, 153) 93%);
     padding: 10px;
     font-family: Arial, sans-serif;
 }
@@ -28,9 +28,9 @@ h1 {
     display: flex;
     align-items: center;
     color: white;
-    text-shadow: 2px 2px 5px rgb(114, 107, 107);
     flex: 1;
     margin: 0;
+    font-family: "Times New Roman", Times, serif;
     
 }
 
@@ -75,6 +75,10 @@ main {
 .content {
     flex: 1;
     padding: 15px;
+    font-family: "Times New Roman", Times, serif;
+    color: rgb(144, 143, 143);
+
+
 }
 
 /* interests section styles */
@@ -86,4 +90,33 @@ main {
 
 h2, h3 {
     margin: 0px;
+}
+
+/* Portfolio styles */
+.content h1 {
+  color: rgb(144, 143, 143);
+  font-family: "Times New Roman", Times, serif;
+
+}
+
+#portfolio {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#portfolio li {
+  background: #a5a5a5b6;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#portfolio li:hover {
+  background: #ffffff;
+}
+
+#portfolio a {
+  text-decoration: none;
+  color: #454545;
+  font-family: "Times New Roman", Times, serif;
 }
