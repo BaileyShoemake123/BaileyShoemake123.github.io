@@ -8,6 +8,7 @@ body {
 #all-contents {
     max-width: 800px;
     margin: auto;
+    
 }
 
 /* navigation menu */
@@ -66,10 +67,15 @@ main {
 .sidebar {
     margin-right: 25px;
     padding: 10px;
+
 }
 
 .sidebar-img {
     width: 200px;
+    border-style: solid;
+    border-color: white;
+    border-width:5px;
+    border-radius:20px;
 }
 
 .content {
