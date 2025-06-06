@@ -47,7 +47,7 @@ $(function () {
 
 
     // TODO 3 - Create Collectables
-    createCollectable("book", 200, 170, 0.5, 0.7);
+    
 
 
 
