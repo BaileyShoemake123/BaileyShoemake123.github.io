@@ -3,7 +3,8 @@ body {
 }
 
 canvas {
-  background-color: lightblue;
+  background-image: url("https://media.tenor.com/5uRp7IWhBOsAAAAM/cat-eating-chips-windows-xp-meme.gif");
+  background-size: 1500px;
   margin: 20px;
 }
 

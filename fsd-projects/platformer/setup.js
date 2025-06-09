@@ -98,8 +98,13 @@ var collectableList = {
   kennedi: { image: "images/collectables/kennedi-head.png" },
   max: { image: "images/collectables/max-head.png" },
   steve: { image: "images/collectables/steve-head.png" },
-  book: { image: "images/collectables/book.jpng" },
-  book2: { image: "images/collectables/book2.jpng" },
+  book: { image: "images/collectables/pngtree-the-books-clipart-vector-png-image_6653533.png" },
+  book2: { image: "images/collectables/Red_Book_PNG_Clipart-1063.png" },
+  book3: { image: "images/collectables/pngtree-the-books-clipart-vector-png-image.png" },
+  lily: { image: "images/collectables/lily-flower-clipart-png-image-lirio-11563612156jm1k6s1own.png" },
+  
+
+
 
 
 };
