@@ -34,10 +34,18 @@ $(document).ready(function () {
   // ALL OF YOUR CODE SHOULD GO BELOW HERE ////////
   /////////////////////////////////////////////////
 
+
   // TODO 1: create a new shape object and add it to the array
+  
+  var shape = {
+    color: "blue"
+    shape: "circle",
+    repeat: 3,
+  };
   
 
   // TODO 2: add a new property to all data shapes
+  
   
 
   // TODO 3-a: add a function that handles the static display type
