@@ -49,7 +49,7 @@ $(document).ready(function () {
   for (var count = 0; count < dataShapes.length; count++){
     var currentShape = dataShapes[count];{
      
-      if (dataShapes[i].color === "red"){
+      if (dataShapes[count].color === "red"){
         currentShape.goodBehavior = "bounce";
       } else if (currentShape.color === "blue"){
         currentShape.goodBehavior = "blink";
