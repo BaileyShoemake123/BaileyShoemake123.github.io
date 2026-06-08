@@ -50,11 +50,11 @@ $(document).ready(function () {
     var currentShape = dataShapes[count];{
      
       if (dataShapes[i].color === "red"){
-        goodBehavior = "bounce";
-      } else if (dataShapes[i].color === "blue"){
-        goodBehavior = "blink";
+        currentShape.goodBehavior = "bounce";
+      } else if (currentShape.color === "blue"){
+        currentShape.goodBehavior = "blink";
       } else {
-        goodBehavior = "spin";
+        currentShape.goodBehavior = "spin";
       }
   
   
