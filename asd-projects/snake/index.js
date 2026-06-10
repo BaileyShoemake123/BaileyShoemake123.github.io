@@ -184,10 +184,19 @@ function hasHitWall() {
     
     HINT: What will the row and column of the snake's head be if this were the case?
   */
+ if (
+  snake.head.row < 0 || 
+  snake.head.row >= ROWS || 
+  snake.head.column < 0 || 
+  snake.head.column >= COLUMNS
+ )
+ {
+ return true;
+ }
+ else{
+ return false;
+ }
 
-
-
-  return false;
 }
 
 function hasCollidedWithApple() {
@@ -197,10 +206,12 @@ function hasCollidedWithApple() {
     
     HINT: Both the apple and the snake's head are aware of their own row and column
   */
+if ( snake.head.row === apple.row && snake.head.column === apple.column ){
+  return true;
+}
 
-
-
-  return false;
+else{
+  return false;}
 }
 
 function handleAppleCollision() {
@@ -226,10 +237,17 @@ function hasCollidedWithSnake() {
     HINT: Each part of the snake's body is stored in the snake.body Array. The
     head and each part of the snake's body also knows its own row and column.
   */
+   const headRow = snake.head.row;
+   const headColumn = snake.head.column;
 
-
-
-  return false;
+   for (let i = 1; i < snake.body.length; i++) {
+   const bodyPart = snake.body[i];
+  
+   if( headRow === bodyPart.row && headColumn === bodyPart.column){
+   return true;
+  }
+ }
+ return false;
 }
 
 function endGame() {
@@ -365,7 +383,10 @@ function getRandomAvailablePosition() {
       not occupied by a snakeSquare in the snake's body. If it is then set 
       spaceIsAvailable to false so that a new position is generated.
     */
-
+    for (var i = 0; i < snake.body.length; i ++){
+      if (randomPosition.row === snake.body[i].row && randomPosition.column === snake.body[i].column)
+        spaceIsAvailable = false;
+    }
 
 
   }
