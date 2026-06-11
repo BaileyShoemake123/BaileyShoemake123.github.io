@@ -23,12 +23,20 @@ body {
 }
 
 .snake {
-  background-color: green;
+  background-color: rgb(60, 128, 0);
   z-index: 2;
 }
 
 #snake-head {
   background-color: darkgreen;
+}
+
+.snake-body {
+  background-color: rgb(60, 128, 0)
+}
+
+.snake-tail {
+  background-color: rgb(60, 128, 0);
 }
 
 .apple {
