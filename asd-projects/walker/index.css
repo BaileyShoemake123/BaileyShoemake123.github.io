@@ -11,11 +11,56 @@ body {
   position: relative;
 }
 
-#gameItem {
-  background-color: teal;
-  width: 50px;
-  height: 50px;
-  position: absolute;
+#walker {
+ /* background-color: rgb(128, 0, 0);
+  width: 60px;
+  height: 60px;
+ position: absolute; 
 /*   left: 100px; */  /* Uncomment if you want to set a "starting" position */
 /*   top: 100px;  */  /* Uncomment if you want to set a "starting" position */
+/* Shifts the heart down/right so the shadows don't clip outside the container */
+   width: 60px;
+  height: 60px;
+   position: absolute;
+
+  
+  /* The very top-left pixel color of the heart outline */
+  background: #000000; 
+  
+  /* Plotting the coordinates: X-offset, Y-offset, blur (0), color */
+  box-shadow: 
+    /* --- ROW 1 --- */
+    20px 0 #000, 30px 0 #000, 70px 0 #000, 80px 0 #000,
+    
+    /* --- ROW 2 --- */
+    10px 10px #000, 20px 10px #f00, 30px 10px #f00, 40px 10px #000, 
+    60px 10px #000, 70px 10px #f00, 80px 10px #f00, 90px 10px #000,
+    
+    /* --- ROW 3 --- */
+    0 20px #000, 10px 20px #f00, 20px 20px #ff7979, 30px 20px #f00, 40px 20px #f00, 50px 20px #000, 
+    60px 20px #f00, 70px 20px #f00, 80px 20px #f00, 90px 20px #f00, 100px 20px #000,
+    
+    /* --- ROW 4 --- */
+    0 30px #000, 10px 30px #f00, 20px 30px #f00, 30px 30px #f00, 40px 30px #f00, 50px 30px #f00, 
+    60px 30px #f00, 70px 30px #f00, 80px 30px #f00, 90px 30px #f00, 100px 30px #000,
+    
+    /* --- ROW 5 --- */
+    0 40px #000, 10px 40px #f00, 20px 40px #f00, 30px 40px #f00, 40px 40px #f00, 50px 40px #f00, 
+    60px 40px #f00, 70px 40px #f00, 80px 40px #f00, 90px 40px #f00, 100px 40px #000,
+    /* --- ROW 6 --- */
+    10px 50px #000, 20px 50px #f00, 30px 50px #f00, 40px 50px #f00, 50px 50px #f00, 
+    60px 50px #f00, 70px 50px #f00, 80px 50px #f00, 90px 50px #000,
+    
+    /* --- ROW 7 --- */
+    20px 60px #000, 30px 60px #f00, 40px 60px #f00, 50px 60px #f00, 
+    60px 60px #f00, 70px 60px #f00, 80px 60px #000,
+    
+    /* --- ROW 8 --- */
+    30px 70px #000, 40px 70px #f00, 50px 70px #f00, 60px 70px #f00, 70px 70px #000,
+    
+    /* --- ROW 9 --- */
+    40px 80px #000, 50px 80px #f00, 60px 80px #000,
+    
+    /* --- ROW 10 --- */
+    50px 90px #000;
 }
