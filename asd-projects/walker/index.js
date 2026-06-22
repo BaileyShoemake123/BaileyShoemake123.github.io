@@ -6,7 +6,13 @@ function runProgram(){
   ////////////////////////////////////////////////////////////////////////////////
   //////////////////////////// SETUP /////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
-
+  const KEY = {
+  ENTER: 13,
+  LEFT: 37,
+  UP: 38,
+  RIGHT: 39,
+  DOWN: 40,
+ };
   // Constant Variables
   var FRAME_RATE = 60;
   var FRAMES_PER_SECOND_INTERVAL = 1000 / FRAME_RATE;
@@ -23,7 +29,15 @@ function runProgram(){
 
   Note: You can have multiple event listeners for different types of events.
   */
-  $(document).on('keydown', handleKeyDown);                          
+  $(document).on('keydown', handleKeyDown);     
+  var walker;
+
+  walker = {
+    x: 0,
+    y: 0,
+    speedX: 0,
+    speedY: 0
+  };
 
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
@@ -46,12 +60,24 @@ function runProgram(){
   */
   function handleKeyDown(event) {
     console.log(event.which);
+    if (event.which === KEY.LEFT) {
+  console.log("left pressed");
+}
+    if (event.which === KEY.RIGHT) {
+      console.log("right pressed");
+    }
+    if (event.which === KEY.UP) {
+      console.log("up pressed");
+    }
+    if (event.which === KEY.DOWN){
+      console.log("down pressed");
+    }
   }
 
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
-
+  var repositionGameItem()
   
   function endGame() {
     // stop the interval timer
