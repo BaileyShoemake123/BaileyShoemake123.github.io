@@ -39,6 +39,8 @@ function runProgram(){
     speedY: 0
   };
 
+  $(document).on('keyup', handleKeyUp); 
+
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
@@ -48,8 +50,13 @@ function runProgram(){
   by calling this function and executing the code inside.
   */
   function newFrame() {
-    
+    //walker.speedX = 5;
+    //walker.speedY = 5; 
 
+    repositionGameItem();
+    redrawGameitem();
+   
+   console.log("walker position:" + walker.x,   walker.y);
   }
   
   /* 
@@ -61,7 +68,7 @@ function runProgram(){
   function handleKeyDown(event) {
     console.log(event.which);
     if (event.which === KEY.LEFT) {
-  console.log("left pressed");
+    console.log("left pressed");
 }
     if (event.which === KEY.RIGHT) {
       console.log("right pressed");
@@ -72,12 +79,36 @@ function runProgram(){
     if (event.which === KEY.DOWN){
       console.log("down pressed");
     }
+    if (event.which === KEY.LEFT){
+      walker.speedX = -5;
+    }
+    if (event.which === KEY.RIGHT){
+      walker.speedX = 5;
+    }
+    if (event.which === KEY.UP){
+      walker.speedY = -5;
+    }
+    if (event.which === KEY.DOWN){
+      walker.speedY = 5;
+    }
+  }
+
+  function handleKeyUp(event){
+   if (event.which === KEY.LEFT || event.which === KEY.RIGHT){
+      walker.speedX = 0;
+   }
+   if (event.which === KEY.UP || event.which === KEY.DOWN){
+      walker.speedY = 0;
+   }
   }
 
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
-  var repositionGameItem()
+  function repositionGameItem(){
+    walker.x += walker.speedX;
+    walker.y += walker.speedY;
+  }
   
   function endGame() {
     // stop the interval timer
@@ -86,5 +117,12 @@ function runProgram(){
     // turn off event handlers
     $(document).off();
   }
+
+  function redrawGameitem(){
+  $("#walker").css("left", walker.x);
+  $("#walker").css("top", walker.y);
+  }
   
 }
+  
+

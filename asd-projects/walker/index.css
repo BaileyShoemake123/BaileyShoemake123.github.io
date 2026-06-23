@@ -19,18 +19,18 @@ body {
 /*   left: 100px; */  /* Uncomment if you want to set a "starting" position */
 /*   top: 100px;  */  /* Uncomment if you want to set a "starting" position */
 /* Shifts the heart down/right so the shadows don't clip outside the container */
-   width: 60px;
-  height: 60px;
+   width: 10px;
+   height: 10px;
    position: absolute;
 
   
   /* The very top-left pixel color of the heart outline */
-  background: #000000; 
+  background: #00000000; 
   
   /* Plotting the coordinates: X-offset, Y-offset, blur (0), color */
   box-shadow: 
     /* --- ROW 1 --- */
-    20px 0 #000, 30px 0 #000, 70px 0 #000, 80px 0 #000,
+    20px 0 #000000, 30px 0 #000, 70px 0 #000, 80px 0 #000,
     
     /* --- ROW 2 --- */
     10px 10px #000, 20px 10px #f00, 30px 10px #f00, 40px 10px #000, 
