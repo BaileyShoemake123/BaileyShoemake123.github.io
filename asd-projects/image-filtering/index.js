@@ -22,7 +22,9 @@ function applyAndRender() {
   // Multiple TODOs: Call your apply function(s) here
 //applyFilter(reddify);
 //applyFilter(decreaseBlue);
+applyFilterNoBackground(decreaseBlue);
 applyFilter(increaseGreenByBlue);
+
 
 
   // do not change the below line of code
@@ -52,17 +54,19 @@ applyFilter(increaseGreenByBlue);
 
 // TODO 9 Create the applyFilterNoBackground function
 function applyFilterNoBackground(filterFunction){
-  var backgroundColor = image[0][0];
-  for (var i = 0; i < image.length; i++){
+  var backgroundColor = image[0][0]; //stores color of top left corner
+  for (var i = 0; i < image.length; i++){ //loop through image
     for (var j = 0; j < image[i].length; j++){
-      if (image[i][j] !== backgroundColor){
-        var pixelArray = rgbStringToArray(image[i][j]);
-        var updatedPixel = filterFunction(pixelArray);
-        image[i][j] = rgbArrayToString(updatedPixel)
+      if (image[i][j] !== backgroundColor){//checks pixel against background
+        var pixelArray = rgbStringToArray(image[i][j]); //convert pixel to array
+        console.log(i,j,pixelArray, "Array")
+        var updatedPixel = filterFunction(pixelArray); 
+        console.log(i,j,updatedPixel, "updated")
+        image[i][j] = rgbArrayToString(updatedPixel);
       }
     }
   }
-}applyFilterNoBackground(decreaseBlue);
+}
 
 // TODO 6: Create the keepInBounds function
 function keepInBounds(num){
